@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guggu ❤️ ZuZu Surprise</title>
+<style>
+  body{margin:0;overflow:hidden;background:#000;font-family:Poppins, sans-serif;color:#fff;}
+  h1{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:2.5rem;text-align:center;color:#00c8ff;}
+  .heart{
+    position:absolute;width:20px;height:20px;background:#ff6b81;transform:rotate(45deg);border-radius:4px;
+  }
+  .heart:before,.heart:after{content:'';position:absolute;background:#ff6b81;width:20px;height:20px;border-radius:50%;}
+  .heart:before{top:-10px;left:0;}
+  .heart:after{left:10px;top:0;}
+</style>
+</head>
+<body>
+
+<h1>ZuZu.... Guggu loves you more than Doraemon loves Doracakes 💙</h1>
+
+<script>
+  function createHeart(){
+    const h = document.createElement('div');
+    h.className = 'heart';
+    h.style.left = Math.random()*100 + 'vw';
+    h.style.top = Math.random()*100 + 'vh';
+    h.style.width = h.style.height = (10 + Math.random()*20) + 'px';
+    document.body.appendChild(h);
+    // animate floating
+    h.animate([
+      {transform:'translateY(0) scale(0.5)', opacity:1},
+      {transform:'translateY(-200px) scale(1)', opacity:0}
+    ], {duration:3000 + Math.random()*2000, iterations:Infinity});
+    setTimeout(()=>h.remove(), 5000);
+  }
+
+  setInterval(createHeart, 200);
+</script>
+
+</body>
+</html>

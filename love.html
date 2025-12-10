@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For ZuZu | From Guggu ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{--bg:#000;--card:#0b0b0b;--accent:#00c8ff;--muted:#9aa7bd;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Poppins,system-ui,Roboto,Arial;color:#e6eef8;background:#000;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;}
+    .wrap{width:100%;max-width:980px;background:rgba(255,255,255,0.05);border-radius:18px;padding:28px;box-shadow:0 8px 30px rgba(0,0,0,0.7);position:relative;overflow:hidden;}
+    header{display:flex;align-items:center;gap:20px}
+    .avatar{width:110px;height:110px;border-radius:22px;background:linear-gradient(135deg,var(--accent),#7c5cff);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:28px;}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin:6px 0 0}
+    .typewriter{color:var(--accent);font-weight:700}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:20px}
+    .card{background:rgba(255,255,255,0.03);padding:18px;border-radius:12px}
+    .story{line-height:1.5;color:#dcefff}
+    .gallery{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .gallery .tile{flex:1 1 calc(50% - 10px);min-height:90px;border-radius:8px;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;color:#ddd;font-weight:600;}
+    .right{position:relative}
+    .buttons{display:flex;flex-direction:column;gap:12px}
+    button.primary{background:linear-gradient(90deg,var(--accent),#7c5cff);border:0;padding:12px 16px;border-radius:10px;color:white;font-weight:700;cursor:pointer;transition:0.3s;}
+    button.primary:hover{transform:scale(1.05)}
+    button.ghost{background:transparent;border:1px solid rgba(255,255,255,0.1);padding:10px;border-radius:10px;color:var(--muted);cursor:pointer;}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+  </style>
+</head>
+<body>
+
+<audio id="bgMusic" src="doraemon.mp3.mp3" loop></audio>
+
+<div class="wrap">
+<header>
+  <div class="avatar" id="avatar">K</div>
+  <div>
+    <h1>For <span id="herName">ZuZu</span> ❤️</h1>
+    <div class="typewriter" id="typewriter">You are my favourite person.</div>
+    <p class="lead">A special surprise... just for you, my ZuZu.</p>
+  </div>
+</header>
+
+<div class="grid">
+  <div>
+    <div class="card story">
+      <h3>Our Story</h3>
+      <p>Hum <strong>7 November 2024</strong> ko mile the… aur tab se tum meri har subah aur har raat ka best part ho. Tumhari awaaz, tumhari hasi, aur tumhara mujhe "Guggu" bulana… sab kuch mere dil ko seedha touch karta hai.</p>
+
+      <div class="gallery" id="gallery">
+        <div class="tile"><img src="img1.jpg" alt="Pic 1" style="width:100%;border-radius:8px"></div>
+        <div class="tile"><img src="img2.jpg" alt="Pic 2" style="width:100%;border-radius:8px"></div>
+        <div class="tile"><img src="img3.jpg" alt="Pic 3" style="width:100%;border-radius:8px"></div>
+        <div class="tile"><img src="img4.jpg" alt="Pic 4" style="width:100%;border-radius:8px"></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3>Why You Are Special to Me 💖</h3>
+      <p style="line-height:1.6; color:#dcefff">
+        • Tumhara black color ka craze — bilkul classy, bilkul tumhari tarah.<br>
+        • Tumhara Doraemon pasand karna — mujhe cute lagta hai, kyunki tum khud bhi Doraemon jaisi ho… soft, caring aur adorable ❤️<br>
+        • Tumhari baatein mere din ka best part hoti hain.<br>
+        • Zuzu… main tumhe kabhi khona nahi chahta.
+      </p>
+    </div>
+  </div>
+
+  <aside class="right">
+    <div class="card">
+      <h3>Special Buttons for You 💙</h3>
+      <div class="buttons">
+        <button class="primary" onclick="playMusic()">Play Doraemon Music 🎵</button>
+        <button class="ghost" onclick="pauseMusic()">Pause Music ⏸️</button>
+        <button class="primary" onclick="openRomanticPage()">Tap for Surprise 💗</button>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3>About this page</h3>
+      <p>Made with ❤️ by Guggu — for his Zuzu.</p>
+    </div>
+  </aside>
+</div>
+
+<footer>Always yours, myZuZu. 💙</footer>
+</div>
+
+<script>
+  const music = document.getElementById("bgMusic");
+  function playMusic(){ music.play(); alert("Doraemon music started 🎵"); }
+  function pauseMusic(){ music.pause(); alert("Music paused ⏸️"); }
+  function loveMsg(){ alert("ZuZu.... Guggu loves you more than Doraemon loves Doracakes 💙"); }
+function openRomanticPage(){
+    window.open('surprise.html', '_blank'); // ye new tab me khulega
+}
+
+  const lines = [
+    'Zuzu… tum meri life ka sabse pyara part ho.',
+    'Tum door ho kar bhi bilkul paas lagti ho.',
+    'Tumhari hasi mera favourite background music hai.',
+    'ZuZu… tum bilkul Doraemon jaisi ho: cute, soft & special.'
+  ];
+
+  let i = 0, tI = 0;
+  const typewriter = document.getElementById('typewriter');
+
+  function typeLoop(){
+    const txt = lines[i];
+    if(tI <= txt.length){
+      typewriter.textContent = txt.slice(0, tI);
+      tI++;
+      setTimeout(typeLoop, 80);
+    } else {
+      setTimeout(()=>{ tI=0; i=(i+1)%lines.length; typeLoop(); }, 1200);
+    }
+  }
+  typeLoop();
+</script>
+
+</body>
+</html>
